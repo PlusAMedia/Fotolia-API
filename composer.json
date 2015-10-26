@@ -2,7 +2,7 @@
     "name": "PlusAMedia/Fotolia-Api",
     "description": "Composer for Fotolia API",
     "keywords": ["fotolia", "api"],
-    "homepage": "https://github.com/PlusAMedia/Fotolia-API",
+    "homepage": "https://github.com/Fotolia/Fotolia-API",
     "type": "library",
     "authors": [
         {
@@ -21,5 +21,6 @@
         "ext-curl": "*"
     },
     "autoload": {
+        "classmap": ["php/"]
     }
 }
