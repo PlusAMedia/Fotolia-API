@@ -1,0 +1,26 @@
+{
+    "name": "PlusAMedia/Fotolia-Api",
+    "description": "Composer for Fotolia API",
+    "keywords": ["fotolia", "api"],
+    "homepage": "https://github.com/Fotolia/Fotolia-API",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Fotolia LLC",
+            "homepage": "http://www.fotolia.com",
+            "role": "Developer"
+        },
+        {
+            "name": "PlusAMedia",
+            "homepage": "http://www.plusamedia.com",
+            "role": "Composer"
+        }
+	],
+    "require": {
+        "php": ">=5.2.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
