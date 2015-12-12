@@ -401,21 +401,21 @@ class Fotolia_Api
         }
 
         $http_code = curl_getinfo( $ch, CURLINFO_HTTP_CODE );
-        $content_type = curl_getinfo( $ch, CURLINFO_CONTENT_TYPE );
+        $this->_contentType = curl_getinfo( $ch, CURLINFO_CONTENT_TYPE );
         curl_close( $ch );
 
-        if ( empty( $content_type ) )
+        if ( empty( $this->_contentType ) )
         {
             throw new Fotolia_Api_Exception( 'Invalid response, no content type returned' );
         }
 
-        if ( strstr( $content_type, ';' ) !== FALSE )
+        if ( strstr( $this->_contentType, ';' ) !== FALSE )
         {
             /** @noinspection PhpUnusedLocalVariableInspection */
-            list( $content_type, $charset ) = explode( ';', $content_type );
+            list( $content_type, $charset ) = explode( ';', $this->_contentType );
         }
 
-        list( $major_mime, $minor_mime ) = explode( '/', $content_type );
+        list( $major_mime, $minor_mime ) = explode( '/', $this->_contentType );
 
         if ( $major_mime == 'application' )
         {
